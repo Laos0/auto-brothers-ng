@@ -1,0 +1,33 @@
+/* For desktops and laptops (min-width: 992px) */
+@media (min-width: 992px) {
+    .navbar-brand {
+      font-size: 24px; /* Larger brand logo */
+    }
+  
+    .navbar-nav .nav-link {
+      font-size: 20px; /* Bigger nav links */
+      padding: 0.75rem 1rem;
+    }
+  
+    .navbar {
+      padding: 1.5rem 2rem; /* More padding for a spacious look */
+    }
+  
+    .container-fluid {
+      max-width: 1200px; /* Constrain the width for better readability */
+      margin: 0 auto;
+    }
+  
+    /* Additional desktop-specific styling */
+    .content {
+      margin: 2rem;
+      font-size: 1.25rem; /* Slightly larger text for better readability */
+    }
+  
+    /* Example: Flexbox layout with two columns */
+    .flex-columns {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  
