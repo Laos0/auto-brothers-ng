@@ -1,0 +1,58 @@
+/* Header Styles */
+header h1 {
+    font-size: 3.5rem;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  header p {
+    font-size: 1.5rem;
+  }
+  
+  /* Services Section */
+  .services .card {
+    border: none;
+    border-radius: .25rem;
+  }
+  
+  .services .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+  }
+  
+  .services .card-title {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .services .card-text {
+    font-size: 1rem;
+  }
+  
+  .services .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  /* Call to Action */
+  .contact-us {
+    background-color: #007bff;
+    padding: 3rem;
+    border-radius: .25rem;
+  }
+  
+  .contact-us h2 {
+    font-size: 2.5rem;
+  }
+  
+  .contact-us p {
+    font-size: 1.25rem;
+  }
+  
+  .contact-us .btn-light {
+    color: #007bff;
+    background-color: #ffffff;
+    border-color: #007bff;
+  }
+  
