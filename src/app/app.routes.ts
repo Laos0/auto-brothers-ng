@@ -5,13 +5,21 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { OurServiceComponent } from './views/our-service/our-service.component';
 import { ContactUsComponent } from './views/contact-us/contact-us.component';
+import { RequestAQuoteComponent } from './views/forms/request-a-quote/request-a-quote.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'home', component: HomeComponent },
     { path: 'about-us', component: AboutUsComponent },
-    { path: 'service', component: OurServiceComponent},
-    { path: 'contact', component: ContactUsComponent}
+    { 
+        path: 'service', 
+        component: OurServiceComponent,
+        children: [
+        ]
+    
+    },
+    { path: 'contact', component: ContactUsComponent},
+    {path: 'request-a-quote', component: RequestAQuoteComponent}
     
 ];
 
