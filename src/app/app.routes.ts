@@ -1,4 +1,4 @@
-import { provideRouter, Routes } from '@angular/router';
+import { InMemoryScrollingFeature, InMemoryScrollingOptions, provideRouter, Routes, withInMemoryScrolling } from '@angular/router';
 import { HomeComponent } from './views/home/home.component';
 import { AboutUsComponent } from './views/about-us/about-us.component';
 import { bootstrapApplication } from '@angular/platform-browser';
@@ -19,11 +19,23 @@ export const routes: Routes = [
     
     },
     { path: 'contact', component: ContactUsComponent},
-    {path: 'request-a-quote', component: RequestAQuoteComponent}
+    {path: 'request-a-quote', component: RequestAQuoteComponent},
+    { path: '', redirectTo: 'home', pathMatch: 'full' }
     
 ];
 
+// ----------------------------------- BEGINNING: Restoring viewport to the top when navigating/routing ----------------------
+const scrollConfig: InMemoryScrollingOptions = {
+    scrollPositionRestoration: 'top',
+    anchorScrolling: 'enabled',
+};
+
+const inMemoryScrollingFeature: InMemoryScrollingFeature =
+  withInMemoryScrolling(scrollConfig);
+
+// ----------------------------------- END: Restoring viewport to the top when navigating/routing ----------------------
+
 // this is the standalone router setup using bootstrapApplication call
 bootstrapApplication(AppComponent, {
-    providers: [provideRouter(routes)]
+    providers: [provideRouter(routes, inMemoryScrollingFeature)] // take out in MemoryScrollingFeature if viewport not restoring to top
 });
